@@ -7,6 +7,7 @@ window.onload = () => {
   document.querySelectorAll(".project").forEach(element => {
     element.addEventListener("click", e => openModal(e));
   });
+  document.body.addEventListener("click", e => closeModal(e));
   document.body.addEventListener("keyup", e => listenForEsc(e));
 };
 
@@ -67,7 +68,7 @@ function openModal(e) {
 
 /** Esta funcion se llama para cerrar el modal */
 function closeModal(e) {
-  // si el click occurio dentro del las imagenes del carousel o dentro del modal, no se cierra el modal.
+  // si el click occurio dentro del las imagenes del carousel o dentro del modal, no se cierra el modal
   if (
     e.target.className.includes("project") ||
     e.target.className === "modal"
