@@ -3,10 +3,11 @@ window.onload = () => {
   document.querySelector(".arrow-left").addEventListener("click", clickLeft);
   document
     .querySelector(".send-button")
-    .addEventListener("click", e=> validateForm(e));
+    .addEventListener("click", e => validateForm(e));
   document.querySelectorAll(".project").forEach(element => {
     element.addEventListener("click", e => openModal(e));
   });
+  document.body.addEventListener("click", e => closeModal(e));
   document.body.addEventListener("keyup", e => listenForEsc(e));
 };
 
